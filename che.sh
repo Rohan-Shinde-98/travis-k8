@@ -45,6 +45,7 @@ spec:
   )"
 
 CUSTOM_RESOURCE_PATH='/tmp/custom-resource-patch.yaml'
+touch CUSTOM_RESOURCE_PATH
 
 echo $str > $CUSTOM_RESOURCE_PATH
 
