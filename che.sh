@@ -61,6 +61,7 @@ kubectl get ingress che -n eclipse-che -o jsonpath='{.spec.rules[0].host}'
 echo "Eclipse Che [sets che-token]..."
 kubectl get ingress/keycloak -n eclipse-che -o jsonpath='{.spec.rules[0].host}'
 # some steps are remaining
+curl -k -X POST $keycloakUrl -H Content-Type: application/x-www-form-urlencoded -d username=admin -d password=admin -d grant_type=password -d client_id=che-public
 
 echo "Eclipse Che [login]..."
 echo "Performing auth:Login..."
